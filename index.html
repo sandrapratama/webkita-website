@@ -24,7 +24,8 @@ section{padding:88px 0}.section-head{max-width:680px;margin-bottom:38px}.section
 footer{border-top:1px solid var(--line);padding:30px 0;color:#8994a6}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 @media(max-width:850px){.navlinks{display:none}.hero{padding-top:70px}.hero-grid,.grid-3,.pricing,.portfolio{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.hero-card{order:-1}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}.hero h1{font-size:2.7rem}.cta{padding:35px 22px}}
-</style>
+@media(max-width:600px){#leadForm>div{grid-template-columns:1fr!important}}\n</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 <nav><div class="container nav"><a class="brand" href="#">Web<span>Kita</span></a><div class="navlinks"><a href="#layanan">Layanan</a><a href="#harga">Harga</a><a href="#portfolio">Portfolio</a><a href="#proses">Proses</a><a href="#faq">FAQ</a></div><a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20WebKita%2C%20saya%20ingin%20konsultasi%20website" target="_blank">Konsultasi Gratis</a></div></nav>
@@ -34,7 +35,39 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:#8994a6}.foot{displ
 <section id="portfolio"><div class="container"><div class="section-head"><div class="kicker">Portfolio</div><h2>Contoh tampilan website.</h2><p>Gunakan bagian ini untuk menampilkan project asli Anda nantinya.</p></div><div class="portfolio"><div class="project"><div class="project-img"><div class="project-window"><div class="project-line" style="width:55%"></div><div class="project-line" style="width:90%;height:18px"></div><div class="project-line" style="width:70%"></div></div></div><div class="project-info"><h3>Brand Fashion</h3><p>Landing page premium untuk meningkatkan penjualan.</p></div></div><div class="project"><div class="project-img"><div class="project-window"><div class="project-line" style="width:40%"></div><div class="project-line" style="width:80%;height:18px"></div><div class="project-line" style="width:65%"></div></div></div><div class="project-info"><h3>Company Profile</h3><p>Website profesional untuk perusahaan jasa.</p></div></div><div class="project"><div class="project-img"><div class="project-window"><div class="project-line" style="width:65%"></div><div class="project-line" style="width:85%;height:18px"></div><div class="project-line" style="width:50%"></div></div></div><div class="project-info"><h3>Bisnis Lokal</h3><p>Website informatif dengan fokus lead WhatsApp.</p></div></div></div></div></section>
 <section id="proses"><div class="container"><div class="section-head"><div class="kicker">Proses</div><h2>Sederhana dari awal sampai online.</h2></div><div class="steps"><div class="step"><div class="num">01 — KONSULTASI</div><h3>Kenali kebutuhan</h3><p>Kita bahas bisnis, target pelanggan, fitur, dan tujuan website.</p></div><div class="step"><div class="num">02 — DESAIN</div><h3>Buat tampilan</h3><p>Kami susun struktur dan desain visual yang sesuai dengan brand.</p></div><div class="step"><div class="num">03 — DEVELOPMENT</div><h3>Bangun website</h3><p>Website dikembangkan agar responsif, cepat, dan mudah digunakan.</p></div><div class="step"><div class="num">04 — LAUNCH</div><h3>Siap digunakan</h3><p>Setelah revisi dan persetujuan, website siap dipublikasikan.</p></div></div></div></section>
 <section id="faq"><div class="container"><div class="section-head"><div class="kicker">FAQ</div><h2>Pertanyaan yang sering ditanyakan.</h2></div><div class="faq"><details><summary>Berapa lama pembuatan website?</summary><p>Umumnya 3–14 hari kerja, tergantung jumlah halaman dan kompleksitas fitur.</p></details><details><summary>Apakah bisa menggunakan domain sendiri?</summary><p>Bisa. Kami dapat membantu proses setup domain dan hosting yang Anda miliki.</p></details><details><summary>Apakah website bisa dibuka di HP?</summary><p>Ya. Website dibuat responsive agar nyaman digunakan di desktop, tablet, dan smartphone.</p></details><details><summary>Apakah setelah website jadi masih bisa direvisi?</summary><p>Bisa. Detail jumlah revisi dapat disesuaikan dengan paket yang dipilih.</p></details></div></div></section>
-<div class="container" id="kontak"><div class="cta"><h2>Siap punya website profesional?</h2><p>Ceritakan bisnis Anda. Kami bantu menentukan struktur, fitur, dan paket yang sesuai.</p><a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20WebKita%2C%20saya%20ingin%20membuat%20website" target="_blank">Chat WhatsApp Sekarang →</a></div></div>
+<div class="container" id="kontak"><div class="cta">
+<h2>Siap punya website profesional?</h2><p>Ceritakan bisnis Anda. Kami bantu menentukan struktur, fitur, dan paket yang sesuai.</p>
+<form id="leadForm" style="max-width:720px;margin:25px auto 0;text-align:left">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<input name="name" required placeholder="Nama Anda" style="padding:14px;border-radius:12px;border:1px solid #334057;background:#0b111c;color:#fff">
+<input name="phone" required placeholder="No. WhatsApp" style="padding:14px;border-radius:12px;border:1px solid #334057;background:#0b111c;color:#fff">
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+<input name="email" type="email" placeholder="Email (opsional)" style="padding:14px;border-radius:12px;border:1px solid #334057;background:#0b111c;color:#fff">
+<select name="service" style="padding:14px;border-radius:12px;border:1px solid #334057;background:#0b111c;color:#fff">
+<option value="">Pilih kebutuhan</option><option>Landing Page</option><option>Company Profile</option><option>Toko Online</option><option>Custom Website</option>
+</select>
+</div>
+<textarea name="message" rows="4" placeholder="Ceritakan kebutuhan website Anda" style="width:100%;margin-top:12px;padding:14px;border-radius:12px;border:1px solid #334057;background:#0b111c;color:#fff;resize:vertical"></textarea>
+<button class="btn btn-primary" type="submit" style="width:100%;margin-top:12px">Kirim Konsultasi Gratis →</button>
+<p id="leadStatus" style="text-align:center;margin:12px 0 0;color:#aab4c5"></p>
+</form>
+</div></div>
+<script>
+const SUPABASE_URL = 'https://wjrhecojzuvlozycbdbd.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_XlOLC7BwdmnjD1WZqoFaZQ_6VyvJeh3';
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+document.getElementById('leadForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.currentTarget, status = document.getElementById('leadStatus');
+  const data = Object.fromEntries(new FormData(form).entries());
+  status.textContent = 'Mengirim...';
+  const { error } = await supabaseClient.from('leads').insert({ ...data, source: 'website' });
+  if (error) { status.textContent = 'Gagal mengirim. Silakan coba lagi atau hubungi WhatsApp.'; return; }
+  status.textContent = 'Terima kasih! Data Anda sudah kami terima.';
+  form.reset();
+});
+</script>
 <footer><div class="container foot"><div><strong>WebKita</strong> — Website yang bekerja untuk bisnis.</div><div>© 2026 WebKita. All rights reserved.</div></div></footer>
 </body>
 </html>
